@@ -24,6 +24,7 @@ ctx.strokeStyle = '#00CC99';
 var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
+        ctx.beginPath();
         var touchobj = e.touches[0] // reference first touch point for this event
         mouse.x=parseInt(touchobj.clientX)
         mouse.y=parseInt(touchobj.clientY)
