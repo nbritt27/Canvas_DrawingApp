@@ -33,7 +33,6 @@ canvas.addEventListener('touchmove', function(e){
     }, false)
     
         
-    }, false)
 canvas.addEventListener('touchstart', function(e) {
     ctx.beginPath();
     var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
