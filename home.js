@@ -12,16 +12,23 @@ canvas.addEventListener('mousemove', function(e) {
   mouse.x = e.pageX - this.offsetLeft;
   mouse.y = e.pageY - this.offsetTop;
 }, false);
-canvas.addEventListener('touchmove', function(e) {
+/*canvas.addEventListener('touchmove', function(e) {
   mouse.x = e.pageX - this.offsetLeft;
   mouse.y = e.pageY - this.offsetTop;
-}, false);
+}, false);*/
 
 ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = '#00CC99';
- 
+box1.addEventListener('touchmove', function(e){
+        var touchobj = e.changedTouches[0] // reference first touch point for this event
+        mouse.x=parseInt(touchobj.clientX)
+        mouse.y=parseInt(touchobj.clientY)
+        //var dist = parseInt(touchobj.clientX) - startx
+        //statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
+        e.preventDefault()
+    }, false)
 canvas.addEventListener('touchstart', function(e) {
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
