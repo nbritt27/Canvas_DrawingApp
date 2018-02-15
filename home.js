@@ -24,11 +24,9 @@ ctx.strokeStyle = '#00CC99';
 var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
-        ctx.beginPath();
         var touchobj = e.touches[0] // reference first touch point for this event
         mouse.x=parseInt(touchobj.clientX)
         mouse.y=parseInt(touchobj.clientY)
-        ctx.moveTo(mouse.x, mouse.y)
         //var dist = parseInt(touchobj.clientX) - startx
         //statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
         e.preventDefault()
@@ -45,7 +43,7 @@ canvas.addEventListener('touchstart', function(e) {
     mouse.y=starty
     ctx.moveTo(mouse.x, mouse.y);
  
-    canvas.addEventListener('touchmove', onPaint, false);
+    //canvas.addEventListener('touchmove', onPaint, false);
 }, false);
  
 canvas.addEventListener('touchend', function() {
