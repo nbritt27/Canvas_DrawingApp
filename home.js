@@ -29,7 +29,6 @@ canvas.addEventListener('touchmove', function(e){
         mouse.x=parseInt(touchobj.clientX)
         mouse.y=parseInt(touchobj.clientY)
         ctx.moveTo(mouse.x, mouse.y)
-        onPaint()
         //var dist = parseInt(touchobj.clientX) - startx
         //statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
         e.preventDefault()
@@ -41,10 +40,10 @@ canvas.addEventListener('touchstart', function(e) {
     var touchobj = e.touches[0] // reference first touch point (ie: first finger)
     startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
     starty = parseInt(touchobj.clientY)
-        e.preventDefault()
-   mouse.x=startx
-  mouse.y=starty
- ctx.moveTo(mouse.x, mouse.y);
+    e.preventDefault()
+    mouse.x=startx
+    mouse.y=starty
+    ctx.moveTo(mouse.x, mouse.y);
  
     canvas.addEventListener('touchmove', onPaint, false);
 }, false);
