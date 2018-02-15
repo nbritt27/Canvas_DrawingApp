@@ -47,7 +47,7 @@ canvas.addEventListener('touchstart', function(e) {
 }, false);
  
 canvas.addEventListener('touchend', function() {
-    canvas.removeEventListener('touchmove', onPaint, false);
+    //canvas.removeEventListener('touchmove', onPaint, false);
 }, false);
 
 
