@@ -38,7 +38,7 @@ canvas.addEventListener('touchstart', function(e) {
     ctx.beginPath();
     var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
     startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
-    starty = parseInt(toucbobj.clientY)
+    starty = parseInt(touchobj.clientY)
         e.preventDefault()
    mouse.x=startx
   mouse.y=starty
