@@ -25,8 +25,8 @@ var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
         var touchobj = e.touches[0] // reference first touch point for this event
-        mouse.x=parseInt(touchobj.clientX)-startX
-        mouse.y=parseInt(touchobj.clientY)-startY
+        mouse.x=parseInt(touchobj.clientX)
+        mouse.y=parseInt(touchobj.clientY)
         onPaint()
         //var dist = parseInt(touchobj.clientX) - startx
         //statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
