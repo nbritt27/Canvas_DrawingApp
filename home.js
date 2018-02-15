@@ -21,17 +21,26 @@ ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = '#00CC99';
-box1.addEventListener('touchmove', function(e){
+var startx=0;
+var startY=0;
+canvas.addEventListener('touchmove', function(e){
         var touchobj = e.changedTouches[0] // reference first touch point for this event
-        mouse.x=parseInt(touchobj.clientX)
-        mouse.y=parseInt(touchobj.clientY)
+        mouse.x=parseInt(touchobj.clientX)-startX
+        mouse.y=parseInt(touchobj.clientY)-startY
         //var dist = parseInt(touchobj.clientX) - startx
         //statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
         e.preventDefault()
     }, false)
+    
+        
+    }, false)
 canvas.addEventListener('touchstart', function(e) {
     ctx.beginPath();
-    ctx.moveTo(mouse.x, mouse.y);
+    var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
+    startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
+    starty = parseInt(toucbobj.clientY)
+        e.preventDefault()
+ ctx.moveTo(mouse.x, mouse.y);
  
     canvas.addEventListener('touchmove', onPaint, false);
 }, false);
