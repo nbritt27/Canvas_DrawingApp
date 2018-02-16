@@ -105,14 +105,15 @@ canvas.addEventListener('touchmove', function(e){
 canvas.addEventListener('touchstart', function(e) {
       ctx.lineWidth = parseInt(document.getElementById("thicknessField").value, 10);
 
-      ctx.beginPath();		
       var touchobj = e.touches[0] // reference first touch point (ie: first finger)
       startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser		      
       starty = parseInt(touchobj.clientY)-this.offsetTop;
       mouse.x=startx		      
       mouse.y=starty	
 
-      ctx.moveTo(mouse.x, mouse.y);		      
+      ctx.moveTo(mouse.x, mouse.y);	
+          ctx.beginPath();		
+
       e.preventDefault()		      
 
      //canvas.addEventListener('touchmove', onPaint, false);		 +
