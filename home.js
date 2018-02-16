@@ -92,8 +92,8 @@ var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
         var touchobj = e.touches[0] // reference first touch point for this event
-        mouse.x=parseInt(touchobj.clientX)
-        mouse.y=parseInt(touchobj.clientY)
+        mouse.x=parseInt(touchobj.clientX)-this.offsetLeft;
+        mouse.y=parseInt(touchobj.clientY)-this.offsetTop;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
         //ctx.moveTo(mouse.x, mouse.y)
