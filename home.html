@@ -1,19 +1,31 @@
 <html>
   <head>
-    <style>
-      body {
-        margin: 0px;
-        padding: 0px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="home.css">      
+    
   </head>
   <body>
+    <div id="bar"></div>
+      <button id="text" onclick="createText()">A</button>
+      <button id="redButton" onclick="changeRed()">   </button>
+      <button id="blueButton" onclick="changeBlue()">   </button>
+      <button id="blackButton" onclick="changeBlack()">   </button>
+      <button id="orangeButton" onclick="changeOrange()">   </button>
+      <button id="greenButton" onclick="changeGreen()">   </button>
+      <button id="purpleButton" onclick="changePurple()">   </button>
+      <button id="eraseButton" onclick="eraseDrawings()">Erase</button>
+      <button id="clearButton" onclick="clearCanvas()">Clear</button>
+      <input type="text" id="thicknessField" value="3">      
+      <button id="saveButton" onclick="beginSave()">Save</button>
+
+    </div>
+
   	<div id="paintDiv">
   		<canvas id="drawingCanvas"></canvas>
 	</div>
 	  <script src="home.js"></script>
-
-
+    <script src="domwindow.js"></script>
+    <script src="canvas_text.js"></script>
+  
 
   </body>
 </html>    
