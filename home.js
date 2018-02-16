@@ -111,7 +111,7 @@ canvas.addEventListener('touchstart', function(e) {
       mouse.x=startx		      
       mouse.y=starty	
 
-      ctx.moveTo(mouse.x, mouse.y);	
+      //ctx.moveTo(mouse.x, mouse.y);	
           ctx.beginPath();		
 
       e.preventDefault()		      
