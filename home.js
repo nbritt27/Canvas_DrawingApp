@@ -102,22 +102,26 @@ canvas.addEventListener('touchmove', function(e){
         e.preventDefault()
     }, false)
     
-canvas.addEventListener('touchstart', function(e) {		 
+canvas.addEventListener('touchstart', function(e) {
+      ctx.lineWidth = parseInt(document.getElementById("thicknessField").value, 10);
+
       ctx.beginPath();		
       var touchobj = e.touches[0] // reference first touch point (ie: first finger)
       startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser		      
       starty = parseInt(touchobj.clientY)		      
-      e.preventDefault()		      
       mouse.x=startx		      
-      mouse.y=starty		      
+      mouse.y=starty	
+
       ctx.moveTo(mouse.x, mouse.y);		      
-      
+      e.preventDefault()		      
+
      //canvas.addEventListener('touchmove', onPaint, false);		 +
  }, false);
 
  
 canvas.addEventListener('touchend', function() {
-    //canvas.removeEventListener('touchmove', onPaint, false);
+    
+    canvas.removeEventListener('touchmove', onPaint, false);
 }, false);
 
 
