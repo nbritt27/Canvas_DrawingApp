@@ -30,6 +30,8 @@ function webWind(container, windowTitle){
     text = document.createTextNode("");
     this.topBar.appendChild(text)
     this.topBar.id="topBar" + totalWind.toString();
+    this.topBar.style.opacity=1.0;
+    this.cont.style.opacity=1.0;
     this.windDiv.appendChild(this.topBar);
     this.windDiv.appendChild(this.cont);
     document.body.appendChild(this.windDiv);
@@ -41,7 +43,7 @@ function webWind(container, windowTitle){
     this.windDiv.style.width = this.cont.width;
     this.windDiv.style.background = "#FFFFFF";
     this.windDiv.id = "windDiv"+totalWind.toString();
-    
+    this.windDiv.style.opacity=0.5;
     this.topBar.style.background = "#999999";
     this.topBar.style.height = "15px";
     this.topBar.style.width = this.windDiv.width;

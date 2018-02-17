@@ -27,8 +27,11 @@
   }).embed("paintDiv");*/
 
 function beginSave(){
+    console.log("Trying to save");
+
     var bar=document.getElementById("bar");
     bar.style.display="none";
+    window.print();
 }
 var backgroundColor="#ffffff";
 var canvas = document.getElementById('drawingCanvas');
