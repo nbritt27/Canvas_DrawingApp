@@ -1,5 +1,5 @@
-# Canvas_DrawingApp
-An attempt to make a basic html5 drawing app.
+# Canvas PDF Editing App
+An attempt to make a basic PDF editing app based on HTML5 Canvas.
 For the current version of the app, go <a href="https://nbritt27.github.io/Canvas_DrawingApp/home.html">here</a>.
 # Basic Controls
 In order to zoom in, simply use Ctrl+ or Ctrl-. 
