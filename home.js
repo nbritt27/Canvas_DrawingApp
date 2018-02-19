@@ -35,13 +35,22 @@ function beginSave(){
 }
 var backgroundColor="#ffffff";
 var canvas = document.getElementById('drawingCanvas');
+//canvas.style.backgroundImage=url("Chemistry Learning Log image.jpg");
 var ctx = canvas.getContext('2d');
 var painting = document.getElementById('paintDiv');
 var paint_style = getComputedStyle(painting);
-canvas.width = screen.width
-canvas.height=screen.height
+//var image=url("Chemistry Learning Log image.jpg");
+//image.height=screen.height;
+//image.width=screen.width;
+canvas.width = screen.width;
+canvas.height=screen.height;
+//canvas.height=screen.height
 
 var mouse = {x: 0, y: 0};
+function dailyWork(){
+    canvas.height=3300;
+    canvas.id='learningCanvas';
+}
 function eraseDrawings(){
     console.log("using eraser tool");
     ctx.strokeStyle=backgroundColor;
