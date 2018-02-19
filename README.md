@@ -8,6 +8,7 @@ The text box at the top represents the width of your sketching tool, and you can
 You can place a text box anywhere by pressing the far left "A" button, and move it around and resize it.
 # Saving
 I am still working on a way to more easily render the page as a PDF, but for now if you press save it will take you to a print dialog. From there, select "Save as PDF" under the Destinations options and it should work. 
+Also, if you click the "Save" button but then want to keep editing, clicking the "Cancel" button that appears will bring back up the top editing bar. 
 # Coming Soon
 This is still only a few days old, and I am working on a way to allow you to load your own PDFs to edit and an easier way to save them.
 # Why Use This Instead of Kami?
