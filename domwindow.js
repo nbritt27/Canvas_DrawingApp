@@ -43,7 +43,7 @@ function webWind(container, windowTitle){
     this.windDiv.style.width = this.cont.width;
     this.windDiv.style.background = "#FFFFFF";
     this.windDiv.id = "windDiv"+totalWind.toString();
-    this.windDiv.style.opacity=0.5;
+    this.windDiv.style.opacity=0.8;
     this.topBar.style.background = "#999999";
     this.topBar.style.height = "15px";
     this.topBar.style.width = this.windDiv.width;
