@@ -25,12 +25,21 @@
       view: "FitH"
     }
   }).embed("paintDiv");*/
-
+function cancelSave(){
+    console.log("Cancelling save");
+    var bar=document.getElementById("bar");
+    bar.style.display="block";
+    var cancelButton=document.getElementById("cancelSave");
+    cancelButton.style.display="none";
+}
 function beginSave(){
     console.log("Trying to save");
 
     var bar=document.getElementById("bar");
+    //bar.id="savingNav";
     bar.style.display="none";
+    var cancelButton=document.getElementById("cancelSave");
+    cancelButton.style.display="inline-block";
     window.print();
 }
 var backgroundColor="#ffffff";

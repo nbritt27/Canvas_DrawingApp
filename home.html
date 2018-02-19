@@ -4,7 +4,7 @@
     
   </head>
   <body>
-    <div id="bar"></div>
+    <div id="bar">
       <button id="text" onclick="createText()">A</button>
       <button id="redButton" onclick="changeRed()">   </button>
       <button id="blueButton" onclick="changeBlue()">   </button>
@@ -18,13 +18,15 @@
       <button id="saveButton" onclick="beginSave()">Save</button>
       <button id="learningLog" onclick="dailyWork()">Daily Work</button>
     </div>
+    <button id="cancelSave" onclick="cancelSave()">Cancel</button>
 
   	<div id="paintDiv">
       <canvas id="drawingCanvas">
 
       </canvas>
       
-	</div>
+  </div>
+  <p>Made using Britt Studios software</p>
 	  <script src="home.js"></script>
     <script src="domwindow.js"></script>
     <script src="canvas_text.js"></script>
