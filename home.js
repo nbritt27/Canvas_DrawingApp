@@ -57,7 +57,7 @@ canvas.height=screen.height;
 
 var mouse = {x: 0, y: 0};
 function worksheet(){
-    canvas.height=9900;
+    canvas.height=4950;
     canvas.id="worksheetCanvas";
 }
 function dailyWork(){
