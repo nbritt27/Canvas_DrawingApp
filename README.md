@@ -13,4 +13,6 @@ Also, if you click the "Save" button but then want to keep editing, clicking the
 This is still only a few days old, and I am working on a way to allow you to load your own PDFs to edit and an easier way to save them.
 # Why Use This Instead of Kami?
 Kami may be best for assignments that you need to automatically save, or if you need a variety of tools. At its current state, this web app is best for shorter uses, whether it be simply note-taking, mind-mapping, drawing, or something that doesn't need many features, such as Daily Work. 
+# Contribute
+This project is openly available on GitHub. To view the code or contribute, just go <a href="https://github.com/nbritt27/Canvas_DrawingApp">here</a>
 
