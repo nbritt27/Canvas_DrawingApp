@@ -113,7 +113,7 @@ if(document.getElementById("thicknessField")!=null){
 }
 else{
     ctx.lineWidth=3;
-}
+}   
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = '#00CC99';
@@ -121,7 +121,7 @@ var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
         var touchobj = e.touches[0] // reference first touch point for this event
-        mouse.x=parseInt(touchobj.clientX)+document.body.scrollLeft;
+        mouse.x=parseInt(touchobj.clientX)-this.offsetLeft+document.body.scrollLeft;
         mouse.y=parseInt(touchobj.clientY)-this.offsetTop+document.body.scrollTop;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
