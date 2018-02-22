@@ -140,7 +140,7 @@ canvas.addEventListener('touchstart', function(e) {
       //mouse.x=startx		      
       //mouse.y=starty	
       ctx.beginPath();		
-      mouse.x=parseInt(touchobj.clientX)+document.body.scrollLeft;
+      mouse.x=parseInt(touchobj.clientX);
       mouse.y=parseInt(touchobj.clientY)-this.offsetTop+document.body.scrollTop;
       ctx.moveTo(mouse.x, mouse.y);	
 
