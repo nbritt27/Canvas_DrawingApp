@@ -46,8 +46,12 @@ var backgroundColor="#ffffff";
 var canvas = document.getElementById('drawingCanvas');
 //canvas.style.backgroundImage=url("Chemistry Learning Log image.jpg");
 var ctx = canvas.getContext('2d');
+var scrollView=document.getElementById("scrollView");
+//scrollView.height=screen.height;
+//scrollView.width=screen.width;
 var painting = document.getElementById('paintDiv');
 var paint_style = getComputedStyle(painting);
+
 //var image=url("Chemistry Learning Log image.jpg");
 //image.height=screen.height;
 //image.width=screen.width;
@@ -117,8 +121,8 @@ var startx=0;
 var startY=0;
 canvas.addEventListener('touchmove', function(e){
         var touchobj = e.touches[0] // reference first touch point for this event
-        mouse.x=parseInt(touchobj.clientX)-this.offsetLeft;
-        mouse.y=parseInt(touchobj.clientY)-this.offsetTop;
+        mouse.x=parseInt(touchobj.clientX)-this.offsetLeft-document.body.scrollLeft;
+        mouse.y=parseInt(touchobj.clientY)-this.offsetTop+document.body.scrollTop;
         ctx.lineTo(mouse.x, mouse.y);
         ctx.stroke();
         //ctx.moveTo(mouse.x, mouse.y)
@@ -136,8 +140,8 @@ canvas.addEventListener('touchstart', function(e) {
       //mouse.x=startx		      
       //mouse.y=starty	
       ctx.beginPath();		
-      mouse.x=parseInt(touchobj.clientX)-this.offsetLeft;
-      mouse.y=parseInt(touchobj.clientY)-this.offsetTop;
+      mouse.x=parseInt(touchobj.clientX)-this.offsetLeft-document.body.scrollLeft;
+      mouse.y=parseInt(touchobj.clientY)-this.offsetTop+document.body.scrollTop;
       ctx.moveTo(mouse.x, mouse.y);	
 
       e.preventDefault()		      
