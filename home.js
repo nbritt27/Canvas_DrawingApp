@@ -25,7 +25,7 @@
       view: "FitH"
     }
   }).embed("paintDiv");*/
-function cancelSave(){
+  function cancelSave(){
     console.log("Cancelling save");
     var bar=document.getElementById("bar");
     bar.style.display="block";
@@ -46,12 +46,8 @@ var backgroundColor="#ffffff";
 var canvas = document.getElementById('drawingCanvas');
 //canvas.style.backgroundImage=url("Chemistry Learning Log image.jpg");
 var ctx = canvas.getContext('2d');
-var scrollView=document.getElementById("scrollView");
-//scrollView.height=screen.height;
-//scrollView.width=screen.width;
 var painting = document.getElementById('paintDiv');
 var paint_style = getComputedStyle(painting);
-
 //var image=url("Chemistry Learning Log image.jpg");
 //image.height=screen.height;
 //image.width=screen.width;
@@ -113,7 +109,7 @@ if(document.getElementById("thicknessField")!=null){
 }
 else{
     ctx.lineWidth=3;
-}   
+}
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.strokeStyle = '#00CC99';
