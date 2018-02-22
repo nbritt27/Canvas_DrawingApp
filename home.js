@@ -52,7 +52,7 @@ var paint_style = getComputedStyle(painting);
 //image.height=screen.height;
 //image.width=screen.width;
 canvas.width = screen.width;
-canvas.height=2000;
+canvas.height=2500;
 //canvas.height=screen.height
 
 var mouse = {x: 0, y: 0};
