@@ -59,7 +59,7 @@ function webWind(container, windowTitle){
         var rect = this.topBar.getBoundingClientRect();
         this.relativeLoc = {
             x: evt.clientX - rect.left,
-            y: evt.clientY - rect.top+document.body.scrollTop;
+            y: evt.clientY - rect.top;
         };
         this.dragging = true;
         document.body.appendChild(this.windDiv);
