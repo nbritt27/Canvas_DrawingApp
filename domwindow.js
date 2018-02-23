@@ -76,7 +76,7 @@ function webWind(container, windowTitle){
     this.MouseMove1 = function(evt){
         if(this.dragging){
             this.windDiv.style.left = (evt.clientX-this.relativeLoc.x).toString()+"px";
-            this.windDiv.style.top = (evt.clientY+document.body.scrollTop).toString()+"px";
+            this.windDiv.style.top = (evt.clientY-this.relativeLoc.y).toString()+"px";
         }
     };
     this.TouchStart1 = function(evt){
