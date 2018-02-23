@@ -59,7 +59,7 @@ function webWind(container, windowTitle){
         var rect = this.topBar.getBoundingClientRect();
         this.relativeLoc = {
             x: evt.clientX - rect.left,
-            y: evt.clientY - rect.top
+            y: evt.clientY - rect.top+document.body.scrollTop;
         };
         this.dragging = true;
         document.body.appendChild(this.windDiv);
@@ -76,7 +76,7 @@ function webWind(container, windowTitle){
     this.MouseMove1 = function(evt){
         if(this.dragging){
             this.windDiv.style.left = (evt.clientX-this.relativeLoc.x).toString()+"px";
-            this.windDiv.style.top = (evt.clientY-this.relativeLoc.y).toString()+"px";
+            this.windDiv.style.top = (evt.clientY-this.relativeLoc.y + document.body.scrollTop).toString()+"px";
         }
     };
     this.TouchStart1 = function(evt){
