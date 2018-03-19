@@ -58,8 +58,8 @@ function webWind(container, windowTitle){
         addTop(this.topBar.id);
         var rect = this.topBar.getBoundingClientRect();
         this.relativeLoc = {
-            x: evt.clientX - rect.left,
-            y: evt.clientY - rect.top
+            x: evt.clientX - rect.left+document.body.scrollLeft,
+            y: evt.clientY - rect.top+document.body.scrollTop
         };
         this.dragging = true;
         document.body.appendChild(this.windDiv);
@@ -75,8 +75,8 @@ function webWind(container, windowTitle){
     };
     this.MouseMove1 = function(evt){
         if(this.dragging){
-            this.windDiv.style.left = (evt.clientX-this.relativeLoc.x).toString()+"px";
-            this.windDiv.style.top = (evt.clientY-this.relativeLoc.y).toString()+"px";
+            this.windDiv.style.left = (evt.clientX-this.relativeLoc.x).toString()+"px"+document.body.scrollLeft;
+            this.windDiv.style.top = (evt.clientY-this.relativeLoc.y).toString()+"px"+document.body.scrollTop;
         }
     };
     this.TouchStart1 = function(evt){
